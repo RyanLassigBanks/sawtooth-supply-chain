@@ -92,10 +92,10 @@ services:
       - "3000:3000"
     command: "bash -c \" \
         set -x && \
-        cd /project/sawtooth-core/families/track_and_trade/client && \
+        cd /sawtooth-supply-chain/client && \
         npm install && \
         npm run build && \
-        cd /project/sawtooth-core/families/track_and_trade/server && \
+        cd /sawtooth-supply-chain/server && \
         npm link bcrypt body-parser express js-schema jsonwebtoken lodash protobufjs sawtooth-sdk rethinkdb && \
         npm run make-fish && \
         curl --request POST --header 'Content-Type: application/octet-stream' --data-binary @fish.batch 'http://rest-api:8008/batches' && \
