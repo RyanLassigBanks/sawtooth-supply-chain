@@ -33,7 +33,7 @@ if os.path.exists("/lib/systemd/system"):
 
 setup(name='sawtooth-supply-chain-tp',
       version=subprocess.check_output(
-          ['../../bin/get_version']).decode('utf-8').strip(),
+          ['../bin/get_version']).decode('utf-8').strip(),
       description='Sawtooth Supply Chain Transaction Processor',
       author='Intel Corporation',
       url='https://github.com/hyperledger/sawtooth-supply-chain',
